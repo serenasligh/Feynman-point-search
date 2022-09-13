@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\input{./latex_header}
+
+\begin{document}
+
+\title{Feynman Point Search}
+\author{Serena K. Sligh $\big|$ github.com/serenasligh/feynman-point-search }
+\date{September 12, 2022}
+
+\maketitle
+
+\problem{Motivation}
+
+\textit{To do:}
+
+\begin{subproblems}
+
+\item Explain why the long sequences of zeros in $2\pi$ (base 10) and also $\pi^{-1/2}$ (base 11) are so amazing.
+
+\item Show the mathematical derivation for the probability of an unbroken string of $k$ digits occurring within the first $n$ digits of a randomly sampled string of numbers.
+
+\item Show the results of searching the first $\sim 2000$ digits of a bunch of variations on irrational numbers ( $\pi$, $e$, $A\pi^n + B$, etc. ) in a variety of bases.
+
+\item Conclude with a remark (``\texit{Wow}''), and end with references to ``A Collection of Dice Problems'' by Matthew Conroy and ``Recounting the Rationals'' by Calkin \& Wilf.
+
+\end{subproblems}
+
+
+
+For $p_n, q_n \in \M{N}$,
+
+$$
+\begin{aligned}
+p_1^2 + p_2^2 &= p_3^2
+\\
+q_1^2 + q_2^2 &= q_3^2
+\end{aligned}
+$$
+
+For $m, n, i, j \in \M{N}$ such that the pairs $m, n$ and $i, j$ are each relatively prime,
+
+$$
+\begin{aligned}
+p_1 &= m^2 + n^2 &\qquad&& q_1 &= i^2 + j^2
+\\ p_2 &= m^2 - n^2 &\qquad&& q_2 &= i^2 - j^2
+\\ p_3 &= 2mn &\qquad&& q_3 &= 2ij
+\end{aligned}
+$$
+
+Let $\M{A}$ be a $3 \times 3$ matrix with matrix elements $a_{ij}$ satisfying the relation
+
+$$
+\begin{aligned}
+\vec{p_n} &= \M{A} \vec{q_n}
+\\
+\begin{bmatrix}
+p_1 \\ p_2 \\ p_3
+\end{bmatrix}
+&=
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13}
+\\ a_{21} & a_{22} & a_{23}
+\\ a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+\begin{bmatrix}
+q_1 \\ q_2 \\ q_3
+\end{bmatrix}
+\end{aligned}
+$$
+
+\clearpage
+
+\problem{References}
+
+\begin{subproblems}
+
+\item \textit{Item 1} \spacer
+
+\item \textit{Item 2: The Iteming} \spacer
+
+\end{subproblems}
+
+\end{document}
