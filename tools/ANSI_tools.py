@@ -42,6 +42,12 @@ def rgb_to_ANSICtrl(rgb, bg=False):
     """
     input: (243,99,20) -> output: \x1b[38;2;243;99;20m
     """
+    assert type(rgb) in (tuple,list) and len(rgb)==3, "Input is improperly formatted."
+    if all( (type(e) is float) and (e <= 1.0) and (e >= 0.0) for e in rgb ):
+        rgb = ( int(256*e) for e in rgb )
+    else:
+        assert all( type(e) is int for e in rgb )
+
     fg_or_bg_code = 48 if bg else 38
     r, g, b = rgb
     return ANSI_ESC + f'[{fg_or_bg_code};2;{r};{g};{b}m'
@@ -76,7 +82,7 @@ def color_text( text, fg=None, bg=None ):
         elif type(inp) is str:
             # Convert hexcolor string to ANSI control string
             rgb = hex_to_rgb(inp)
-        elif type(inp) is tuple:
+        elif type(inp) in (tuple,list):
             rgb = inp
         else:
             raise ValueError
