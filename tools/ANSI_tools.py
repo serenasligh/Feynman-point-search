@@ -43,7 +43,7 @@ def rgb_to_ANSICtrl(rgb, bg=False):
     input: (243,99,20) -> output: \x1b[38;2;243;99;20m
     """
     assert type(rgb) in (tuple,list) and len(rgb)==3, "Input is improperly formatted."
-    if all( (type(e) is float) and (e <= 1.0) and (e >= 0.0) for e in rgb ):
+    if all( (type(e) is float) or ( (e <= 1.0) and (e >= 0.0) ) for e in rgb ):
         rgb = ( int(256*e) for e in rgb )
     else:
         assert all( type(e) is int for e in rgb )
