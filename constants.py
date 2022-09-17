@@ -2,12 +2,16 @@ import gmpy2, math
 from tools.math_tools import generate_rationals, cartprod
 from tools.label_tools import make_exp_label
 
+
 log10prob_limit = 0 # minimum probability necessary for the entire number to be flagged as interesting and printed to the terminal.
 line_length = 128 # maximum number of digits to print to the terminal before a new line.
 num_len_base10 = 2400 # maximum number of base-10 digits to consider (this will result in more digits in bases <10, and less digits in bases >10)
 
+
+# gmpy2 precision is specfied in base-2
 num_len_base2 = int( math.log(10)/math.log(2) * ( num_len_base10 + 1 ) )
-gmpy2.get_context().precision = num_len_base2 # precision is specfied in base-2
+gmpy2.get_context().precision = num_len_base2
+
 
 constant_paths = {
     "pi": "constants/pi.txt"
@@ -62,9 +66,9 @@ output_file = "output/output1.txt"
 # coefficients = [ (a,b) for a,b in generate_rationals(7) ]
 # bases = [10,11,5]
 #
-# output_file = "output/output2.txt"
-#
 # constants_to_check = cartprod( bases, constant_keys, exponents, coefficients )
+#
+# output_file = "output/output2.txt"
 
 
 
@@ -104,6 +108,7 @@ output_file = "output/output1.txt"
 # for a,b in generate_rationals(100):
 #     if a%11!=0 and b%11!=0:
 #         coefficients.append( (a,b) )
+#
 # constants_to_check = cartprod( bases, constant_keys, exponents, coefficients )
 #
 # output_file = "output/output4.txt"
