@@ -9,6 +9,8 @@ For an as of yet unknown reason, the base-10 digits of pi contain a sequence of 
 
 ## Computing the probability of the Feynman point's occurrence
 
+The following was essentially transcribed from problem \#18 of https://www.madandmoonly.com/doctormatt/mathematics/dice1.pdf by Matthew M. Conroy.
+
 The probability of the six nines occurring within the first 762 digits can be computed using a recursion relation:
 
 Let p_n be the probability of k successive nines occurring within the first n digits, and let b be the probability of any digit of pi being nine (so b = 1/10 in base-10, assuming pi is normal).
