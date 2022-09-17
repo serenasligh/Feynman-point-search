@@ -87,8 +87,6 @@ def feynman_point_probability( n, r, b, prob_library={}, max_recursion_depth=20 
     e.g. The probability of '0000000' occuring within the first 16 digits of pi (assuming the digits of pi are 'normal'/randomly sampled).
     3.1415928500000000923429358...
 
-    See github.com/serenasligh/feynman-point-search/math_explanation.pdf for more details.
-
     n                       - (int) The number of digits comprising the number.
     r                       - (int) The number of times a digit occurs successively.
     b                       - (int) The base of the number.
@@ -187,10 +185,3 @@ def generate_rationals(n=0):
     #     vals.append( vals[n] )
     #     n += 1
     #     vals.append( vals[n-1] + vals[n] )
-
-    # vals = (0,1)
-    # n = 0
-    # while True:
-    #     yield (vals[n], vals[n+1])
-    #     vals += ( vals[n], vals[n]+vals[n+1] )
-    #     n += 1

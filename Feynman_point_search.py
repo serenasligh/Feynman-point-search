@@ -8,10 +8,8 @@ from tools.baseconvert import base
 from tools.ANSI_tools import color_text, ANSI_RESET, rgb_to_ANSICtrl
 
 import matplotlib as mpl
-import matplotlib.pyplot as plt
 
-from settings import log10prob_limit, line_length, num_len_base10
-from constants import constant_values, constants_to_check, output_file
+from constants import log10prob_limit, line_length, num_len_base10, constant_values, constants_to_check, output_file
 
 prob_library = {} # A dictionary to save the output of previous probability calculations so as to avoid exceeding python's recursion depth limit.
 constants_archive = {} # Save the previous computed constants to a dictionary, so that they can be referenced for conversion into other bases.
@@ -56,7 +54,7 @@ def colorize_digit_sequences(number_string, b, log10prob_limit):
     min_prob_index  - (int) The index of the most improbable sequence of digits in the constant.
     """
 
-    norm = mpl.colors.Normalize(vmin=-3, vmax=0) #log10prob_limit, vmax=0)
+    norm = mpl.colors.Normalize(vmin=log10prob_limit-1, vmax=0)
     cmap = subset_colormap("YlOrRd_r", new_min=0, new_max=0.7)
 
     # Match all occurrences of digits repeating themselves twice or more successively.
