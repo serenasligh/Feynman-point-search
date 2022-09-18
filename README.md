@@ -46,15 +46,15 @@ Setting *b = 1/10*, *k = 6*, and *n = 767* (since the sequence of nines terminat
 
 One way you could interpret this is that 7 out of every 10000 normal irrational numbers will have a sequence of nines this close to the decimal point. There are other irrational constants with even more improbable sequences of digits.
 
-- *2 * pi = 6.2831853071* has a sequence of *seven* 9s in base-10 starting at digit \#760, with probability *p = 10^-4.164 ~ 7/100,000*.
+- *2 * pi = 6.2831853071* has a sequence of **seven** 9s in base-10 starting at digit \#760, with probability *p = 10^-4.164 ~ 7/100,000*.
 
-- *(pi)^(-1/2) = 0.622A332988A* in base-11 has a sequence of six As starting at index 904, with *p = 10^-3.333 ~ 5/10,000*.
+- *(pi)^(-1/2) = 0.622A332988A* in base-11 has a sequence of six As starting at digit \#904, with *p = 10^-3.333 ~ 5/10,000*.
 
-- Furthermore, *10/(84^2) * (pi)^(-1/2) = 0.00107857971* in base-11 has a sequence of *NINE* As starting at index 904, with *p = 10^-6.457 ~ 3/10,000,000*. (See output/output4.txt for more incredible results with *(pi)^(-1/2)* in base-11.)
+- Furthermore, *1/(84^2) * (pi)^(-1/2) = 0.00107857971* in base-11 has a sequence of ***NINE*** 1s starting at digit \#904, with *p = 10^-6.457 ~ 3/10,000,000*.
 
-- *(1/2)*( ln(3) )^(-1/2) = 0.954064582000001399* in base-10 has a sequence of five 0s starting at index 14, with *p = 10^-5.041 ~ 1/100,000*.
+- *(1/2) * ln(3)^(-1/2) = 0.954064582000001399* in base-10 has a sequence of five 0s starting at digit \#14, with *p = 10^-5.041 ~ 1/100,000*.
 
-- *(2/3) * 7^(-1/3) = 0.1332401442030* in base-5 has a sequence of eight 1s starting at index 33, with *p = 10^-4.154 ~ 7/100,000*.
+- *(2/3) * 7^(-1/3) = 0.1332401442030* in base-5 has a sequence of eight 1s starting at digit \#33, with *p = 10^-4.154 ~ 7/100,000*.
 
 # How to use this project
 
