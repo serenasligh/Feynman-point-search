@@ -3,7 +3,7 @@ from tools.math_tools import generate_rationals, cartprod
 from tools.label_tools import make_exp_label
 
 
-log10prob_limit = 0 # minimum probability necessary for the entire number to be flagged as interesting and printed to the terminal.
+log10prob_limit = -3 # minimum probability necessary for the entire number to be flagged as interesting and printed to the terminal.
 line_length = 128 # maximum number of digits to print to the terminal before a new line.
 num_len_base10 = 2400 # maximum number of base-10 digits to consider (this will result in more digits in bases <10, and less digits in bases >10)
 
@@ -56,15 +56,19 @@ output_file = "output/output1.txt"
 #### Uncomment to generate output2.txt ####
 ###########################################
 
-# constant_values["2"] = gmpy2.mpz(2)
-# constant_values["3"] = gmpy2.mpz(3)
-# constant_values["5"] = gmpy2.mpz(5)
-# constant_values["7"] = gmpy2.mpz(7)
+# from tools.math_tools import generate_primes
 #
-# constant_keys = ["2","3","5","7"]
-# exponents = [ (-1,n) for n in (2,3,4,5) ]
-# coefficients = [ (a,b) for a,b in generate_rationals(7) ]
-# bases = [10,11,5]
+# constant_keys = []
+# for i, p in zip(range(100),generate_primes()):
+#     constant_key = str(p)
+#     constant_keys.append( constant_key )
+#     constant_values[constant_key] = gmpy2.mpz(p)
+# exponents = []
+# for a,b in generate_rationals(14):
+#     if b != 1:
+#         exponents.append( (a,b) )
+# coefficients = [ (1,1) ]
+# bases = [10,11,16]
 #
 # constants_to_check = cartprod( bases, constant_keys, exponents, coefficients )
 #
@@ -104,9 +108,10 @@ output_file = "output/output1.txt"
 # constant_keys = ["pi"]
 # exponents = [(-1,2)]
 # bases = [11]
-# coefficients = []
+# coefficients = [(1,84**2)]
 # for a,b in generate_rationals(100):
 #     if a%11!=0 and b%11!=0:
+#         # We can skip rational numbers with factors of 11 in the numerator/denominator, since they just result in a left/right translation of the digits.
 #         coefficients.append( (a,b) )
 #
 # constants_to_check = cartprod( bases, constant_keys, exponents, coefficients )
