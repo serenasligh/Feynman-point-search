@@ -44,7 +44,7 @@ To determine the value of *p_n* for any *n*, we can start by first computing *p_
 
 Setting *b = 1/10*, *k = 6*, and *n = 767* (since the sequence of nines terminates at digit \#767 relative to the decimal point) we find that *p = 10^-3.164 ~ 7/10,000*.
 
-One way you could interpret this is that 7 out of every 10000 normal irrational numbers will have a sequence of nines this close to the decimal point. There are other irrational constants with even more improbable sequences of digits.
+One way you could interpret this is that 7 out of every 10000 normal irrational numbers will have a sequence of nines this close (or possibly closer) to the decimal point. There are other irrational constants with even more improbable sequences of digits.
 
 - *2 * pi = 6.2831853071* has a sequence of **seven** 9s in base-10 starting at digit \#760, with probability *p = 10^-4.164 ~ 7/100,000*.
 
