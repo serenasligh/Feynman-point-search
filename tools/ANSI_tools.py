@@ -41,12 +41,13 @@ def hex_to_rgb(h):
 def rgb_to_ANSICtrl(rgb, bg=False):
     """
     input: (243,99,20) -> output: \x1b[38;2;243;99;20m
+    bg  - (boolean) If True/False, returns an ANSI control sequence that colors the background/foreground of text. 
     """
     assert type(rgb) in (tuple,list) and len(rgb)==3, "Input is improperly formatted."
     if all( (type(e) is float) or ( (e <= 1.0) and (e >= 0.0) ) for e in rgb ):
-        rgb = ( int(256*e) for e in rgb )
+        rgb = ( int(255*e) for e in rgb )
     else:
-        assert all( type(e) is int for e in rgb )
+        assert all( (type(e) is int) and ( (e <= 255) and (e >= 0) ) for e in rgb )
 
     fg_or_bg_code = 48 if bg else 38
     r, g, b = rgb
